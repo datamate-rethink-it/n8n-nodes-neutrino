@@ -1,6 +1,6 @@
 {
 	"name": "n8n-nodes-neutrino",
-	"version": "0.0.1",
+	"version": "0.9.0",
 	"description": "n8n app to interact with the Neutrino API.",
 	"keywords": [
 		"n8n-community-node-package"

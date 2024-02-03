@@ -1,6 +1,7 @@
 import type { INodeTypeDescription } from 'n8n-workflow';
 
 import * as data_tools from './data_tools';
+import * as www from './www';
 import * as security_networking from './security_networking';
 
 export const versionDescription: INodeTypeDescription = {
@@ -34,6 +35,10 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'data_tools',
 				},
 				{
+					name: 'WWW',
+					value: 'www',
+				},
+				{
 					name: 'Security and Networking',
 					value: 'security_networking',
 				},
@@ -41,6 +46,7 @@ export const versionDescription: INodeTypeDescription = {
 			default: 'data_tools',
 		},
 		...data_tools.descriptions,
+		...www.descriptions,
 		...security_networking.descriptions,
 	],
 };
