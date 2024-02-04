@@ -14,7 +14,7 @@ export const image_resizeDescription: NeutrinoImagingProperties = [
 		},
 		default: '',
 		description:
-			'The HTML content. This can be either a URL to load from, a file upload (multipart/form-data) or an HTML content string.',
+			'The URL or Base64 encoded Data URL for the source image. You can also upload an image file directly using multipart/form-data.',
 	},
 	{
 		displayName: 'Width',
@@ -43,7 +43,7 @@ export const image_resizeDescription: NeutrinoImagingProperties = [
 		},
 		default: '',
 		description:
-			"	The height to resize to (in px). If you don't set this field then the height will be automatic based on the requested width and image aspect ratio.",
+			"The height to resize to (in px). If you don't set this field then the height will be automatic based on the requested width and image aspect ratio.",
 	},
 	{
 		displayName: 'Format',

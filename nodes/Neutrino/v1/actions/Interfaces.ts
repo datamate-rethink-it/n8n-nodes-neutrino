@@ -10,7 +10,7 @@ type NeutrinoMap = {
 		| 'ip_probe'
 		| 'ip_blocklist'
 		| 'host_reputation';
-	imaging: 'html_render' | 'image_resize';
+	imaging: 'html_render' | 'image_resize' | 'image_watermark';
 };
 
 export type Neutrino = AllEntities<NeutrinoMap>;
