@@ -17,7 +17,7 @@ export const browser_botDescription: NeutrinoWWWProperties = [
 		description: 'The URL to load.',
 	},
 	{
-		displayName: 'timeout',
+		displayName: 'Timeout',
 		name: 'timeout',
 		type: 'number',
 		required: false,
@@ -32,7 +32,7 @@ export const browser_botDescription: NeutrinoWWWProperties = [
 			'Timeout in seconds. Give up if still trying to load the page after this number of seconds.',
 	},
 	{
-		displayName: 'delay',
+		displayName: 'Delay',
 		name: 'delay',
 		type: 'number',
 		required: false,

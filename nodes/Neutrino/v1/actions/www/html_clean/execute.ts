@@ -5,27 +5,14 @@ export async function html_clean(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	const url = this.getNodeParameter('url', index) as object;
-	const timeout = this.getNodeParameter('timeout', index) as object;
-	const delay = this.getNodeParameter('delay', index) as object;
-	const selector = this.getNodeParameter('selector', index) as object;
-	const exec = this.getNodeParameter('exec', index) as object;
-	const user_agent = this.getNodeParameter('user_agent', index) as object;
-	const ignore_certificate_errors = this.getNodeParameter(
-		'ignore_certificate_errors',
-		index,
-	) as object;
+	const content = this.getNodeParameter('content', index) as object;
+	const output_type = this.getNodeParameter('output_type', index) as object;
 
 	const options: OptionsWithUri = {
 		method: 'GET',
 		qs: {
-			url: url,
-			timeout: timeout,
-			delay: delay,
-			selector: selector,
-			exec: exec,
-			'user-agent': user_agent,
-			'ignore-certificate-errors': ignore_certificate_errors,
+			content: content,
+			output_type: output_type,
 		},
 		uri: 'https://neutrinoapi.net/html-clean',
 		json: true,

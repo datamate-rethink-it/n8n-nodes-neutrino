@@ -3,6 +3,8 @@ import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-wor
 import * as data_tools from './data_tools';
 import * as security_networking from './security_networking';
 import * as www from './www';
+import * as geolocation from './geolocation';
+import * as imaging from './imaging';
 
 import { Neutrino } from './Interfaces';
 
@@ -26,10 +28,14 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 		try {
 			if (neutrino.resource === 'data_tools') {
 				responseData = await data_tools[neutrino.operation].execute.call(this, i);
-			} else if (neutrino.resource === 'security_networking') {
-				responseData = await security_networking[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'www') {
 				responseData = await www[neutrino.operation].execute.call(this, i);
+			} else if (neutrino.resource === 'geolocation') {
+				responseData = await geolocation[neutrino.operation].execute.call(this, i);
+			} else if (neutrino.resource === 'security_networking') {
+				responseData = await security_networking[neutrino.operation].execute.call(this, i);
+			} else if (neutrino.resource === 'imaging') {
+				responseData = await imaging[neutrino.operation].execute.call(this, i);
 			}
 
 			const executionData = this.helpers.constructExecutionMetaData(
