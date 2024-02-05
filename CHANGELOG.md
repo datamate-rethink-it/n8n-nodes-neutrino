@@ -16,6 +16,21 @@ New endpoints added:
 
 - Browser Bot
 - HTML Clean
+- URL Info
+
+**Telephony**
+
+- Phone Verify
+- SMS Verify
+- Verify Security Code
+- Phone Playback
+- HLR Lookup
+
+**Geolocation**
+
+- IP Info
+- Geocode Address
+- Geocode Reverse
 
 **Security and Networking**
 
@@ -23,6 +38,14 @@ New endpoints added:
 - Email Verify
 - IP-Probe
 - IP-Blocklist
+- Host Reputation
+
+**Imaging**
+
+- HTML Render
+- Image Resize
+- Image Watermark
+- QR Code
 
 ## v0.0.1 (2024-02-02)
 
