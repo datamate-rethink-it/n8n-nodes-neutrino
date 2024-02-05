@@ -1,10 +1,11 @@
 import * as html_render from './html_render';
 import * as image_resize from './image_resize';
 import * as image_watermark from './image_watermark';
+import * as qr_code from './qr_code';
 
 import type { INodeProperties } from 'n8n-workflow';
 
-export { html_render, image_resize, image_watermark };
+export { html_render, image_resize, image_watermark, qr_code };
 
 export const descriptions: INodeProperties[] = [
 	{
@@ -36,9 +37,17 @@ export const descriptions: INodeProperties[] = [
 				description: 'Watermark one image with another image.',
 				action: 'Image Watermark',
 			},
+			{
+				name: 'QR Code',
+				value: 'qr_code',
+				description: 'Watermark one image with another image.',
+				action: 'QR Code',
+			},
 		],
 		default: 'html_render',
 	},
 	...html_render.description,
 	...image_resize.description,
+	...image_watermark.description,
+	...qr_code.description,
 ];

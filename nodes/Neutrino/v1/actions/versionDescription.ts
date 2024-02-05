@@ -2,6 +2,7 @@ import type { INodeTypeDescription } from 'n8n-workflow';
 
 import * as data_tools from './data_tools';
 import * as www from './www';
+import * as telephony from './telephony';
 import * as geolocation from './geolocation';
 import * as security_networking from './security_networking';
 import * as imaging from './imaging';
@@ -41,6 +42,10 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'www',
 				},
 				{
+					name: 'Telephony',
+					value: 'telephony',
+				},
+				{
 					name: 'Geolocation',
 					value: 'geolocation',
 				},
@@ -57,6 +62,7 @@ export const versionDescription: INodeTypeDescription = {
 		},
 		...data_tools.descriptions,
 		...www.descriptions,
+		...telephony.descriptions,
 		...geolocation.descriptions,
 		...security_networking.descriptions,
 		...imaging.descriptions,

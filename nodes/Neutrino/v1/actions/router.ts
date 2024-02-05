@@ -3,6 +3,7 @@ import type { IExecuteFunctions, IDataObject, INodeExecutionData } from 'n8n-wor
 import * as data_tools from './data_tools';
 import * as security_networking from './security_networking';
 import * as www from './www';
+import * as telephony from './telephony';
 import * as geolocation from './geolocation';
 import * as imaging from './imaging';
 
@@ -30,6 +31,8 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 				responseData = await data_tools[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'www') {
 				responseData = await www[neutrino.operation].execute.call(this, i);
+			} else if (neutrino.resource === 'telephony') {
+				responseData = await telephony[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'geolocation') {
 				responseData = await geolocation[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'security_networking') {

@@ -5,30 +5,22 @@ export async function image_watermark(
 	this: IExecuteFunctions,
 	index: number,
 ): Promise<INodeExecutionData[]> {
-	const image_url = this.getNodeParameter('image_url', index) as object;
-	const watermark_url = this.getNodeParameter('watermark_url', index) as object;
-	const opacity = this.getNodeParameter('opacity', index) as object;
-	const format = this.getNodeParameter('format', index) as object;
-	const position = this.getNodeParameter('position', index) as object;
+	const content = this.getNodeParameter('content', index) as object;
 	const width = this.getNodeParameter('width', index) as object;
 	const height = this.getNodeParameter('height', index) as object;
-	const resize_mode = this.getNodeParameter('resize_mode', index) as object;
+	const fg_color = this.getNodeParameter('fg_color', index) as object;
 	const bg_color = this.getNodeParameter('bg_color', index) as object;
 
 	const options: OptionsWithUri = {
 		method: 'GET',
 		qs: {
-			'image-url': image_url,
-			'watermark-url': watermark_url,
-			opacity: opacity,
-			format: format,
-			position: position,
+			content: content,
 			width: width,
 			height: height,
-			'resize-mode': resize_mode,
+			'fg-color': fg_color,
 			'bg-color': bg_color,
 		},
-		uri: 'https://neutrinoapi.net/image-resize',
+		uri: 'https://neutrinoapi.net/qr-code',
 		json: true,
 	};
 
