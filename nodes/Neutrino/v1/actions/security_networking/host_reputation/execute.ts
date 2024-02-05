@@ -12,7 +12,7 @@ export async function host_reputation(
 		qs: {
 			host: host,
 		},
-		uri: 'https://neutrinoapi.net/host_reputation',
+		uri: 'https://neutrinoapi.net/host-reputation',
 		json: true,
 	};
 

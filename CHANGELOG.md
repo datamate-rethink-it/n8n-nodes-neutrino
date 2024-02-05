@@ -1,5 +1,9 @@
 # Changelog
 
+## v0.9.1 (2024-02-05)
+
+Fixing wrong url in Image Watermark and Host Reputation endpoint.
+
 ## v0.9.0 (2024-02-03)
 
 New endpoints added:

@@ -28,7 +28,7 @@ export async function image_watermark(
 			'resize-mode': resize_mode,
 			'bg-color': bg_color,
 		},
-		uri: 'https://neutrinoapi.net/image-resize',
+		uri: 'https://neutrinoapi.net/image-watermark',
 		json: true,
 	};
 
