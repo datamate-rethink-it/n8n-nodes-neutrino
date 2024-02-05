@@ -5,6 +5,7 @@ import * as security_networking from './security_networking';
 import * as www from './www';
 import * as telephony from './telephony';
 import * as geolocation from './geolocation';
+import * as ecommerce from './ecommerce';
 import * as imaging from './imaging';
 
 import { Neutrino } from './Interfaces';
@@ -37,6 +38,8 @@ export async function router(this: IExecuteFunctions): Promise<INodeExecutionDat
 				responseData = await geolocation[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'security_networking') {
 				responseData = await security_networking[neutrino.operation].execute.call(this, i);
+			} else if (neutrino.resource === 'ecommerce') {
+				responseData = await ecommerce[neutrino.operation].execute.call(this, i);
 			} else if (neutrino.resource === 'imaging') {
 				responseData = await imaging[neutrino.operation].execute.call(this, i);
 			}

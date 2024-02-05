@@ -40,6 +40,11 @@ New endpoints added:
 - IP-Blocklist
 - Host Reputation
 
+**E-commerce**
+
+- BIN Lookup
+- Currency Convert
+
 **Imaging**
 
 - HTML Render

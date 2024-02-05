@@ -5,6 +5,7 @@ import * as www from './www';
 import * as telephony from './telephony';
 import * as geolocation from './geolocation';
 import * as security_networking from './security_networking';
+import * as ecommerce from './ecommerce';
 import * as imaging from './imaging';
 
 export const versionDescription: INodeTypeDescription = {
@@ -54,6 +55,10 @@ export const versionDescription: INodeTypeDescription = {
 					value: 'security_networking',
 				},
 				{
+					name: 'E-Commerce',
+					value: 'ecommerce',
+				},
+				{
 					name: 'Imaging',
 					value: 'imaging',
 				},
@@ -65,6 +70,7 @@ export const versionDescription: INodeTypeDescription = {
 		...telephony.descriptions,
 		...geolocation.descriptions,
 		...security_networking.descriptions,
+		...ecommerce.descriptions,
 		...imaging.descriptions,
 	],
 };

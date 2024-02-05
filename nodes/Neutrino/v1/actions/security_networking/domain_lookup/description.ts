@@ -24,7 +24,7 @@ export const domain_lookupDescription: NeutrinoSecurityProperties = [
 		displayOptions: {
 			show: {
 				resource: ['security_networking'],
-				operation: ['email_verify'],
+				operation: ['domain_lookup'],
 			},
 		},
 		default: true,

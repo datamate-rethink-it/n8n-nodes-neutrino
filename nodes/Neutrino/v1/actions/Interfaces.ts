@@ -16,6 +16,7 @@ type NeutrinoMap = {
 		| 'ip_probe'
 		| 'ip_blocklist'
 		| 'host_reputation';
+	ecommerce: 'bin_lookup' | 'currency_convert';
 	imaging: 'html_render' | 'image_resize' | 'image_watermark' | 'qr_code';
 };
 
@@ -26,6 +27,7 @@ export type NeutrinoWWW = Entity<NeutrinoMap, 'www'>;
 export type NeutrinoTelephony = Entity<NeutrinoMap, 'telephony'>;
 export type NeutrinoGeolocation = Entity<NeutrinoMap, 'geolocation'>;
 export type NeutrinoSecurityNetworking = Entity<NeutrinoMap, 'security_networking'>;
+export type NeutrinoEcommerce = Entity<NeutrinoMap, 'ecommerce'>;
 export type NeutrinoImaging = Entity<NeutrinoMap, 'imaging'>;
 
 export type DataToolsProperties = PropertiesOf<NeutrinoDataTools>;
@@ -33,4 +35,5 @@ export type NeutrinoWWWProperties = PropertiesOf<NeutrinoWWW>;
 export type NeutrinoTelephonyProperties = PropertiesOf<NeutrinoTelephony>;
 export type NeutrinoGeolocationProperties = PropertiesOf<NeutrinoGeolocation>;
 export type NeutrinoSecurityProperties = PropertiesOf<NeutrinoSecurityNetworking>;
+export type NeutrinoEcommerceProperties = PropertiesOf<NeutrinoEcommerce>;
 export type NeutrinoImagingProperties = PropertiesOf<NeutrinoImaging>;

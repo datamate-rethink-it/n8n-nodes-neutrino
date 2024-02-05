@@ -37,7 +37,21 @@ export const descriptions: INodeProperties[] = [
 				name: 'Verify Security Code',
 				value: 'verify_security_code',
 				description: 'Check if a security code sent via SMS Verify or Phone Verify is valid.',
-				action: 'verify_security_code',
+				action: 'Verify Security Code',
+			},
+			{
+				name: 'Phone Playback',
+				value: 'phone_playback',
+				description:
+					'Make an automated call to any valid phone number and playback an audio message.',
+				action: 'Phone Playback',
+			},
+			{
+				name: 'HLR Lookup',
+				value: 'hlr_lookup',
+				description:
+					'Connect to the global mobile cellular network and retrieve the status of a mobile device.',
+				action: 'HLR Lookup',
 			},
 		],
 		default: 'phone_verify',
